@@ -1,0 +1,21 @@
+<ion-view title="Calendar" id="page6" ng-controller="calendarCtrl">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+    <h2>Appointment:</h2>
+    <div class="list-items animate-show-item" ng-repeat="item in formData">
+      <ul>
+      <li  class="animate-repeat-item">
+        <span ng-class="{done:item.completed}" ltc-editable class-off="done" ng-model="item.text">
+          <strong>{{item.text}}</strong></span>
+          <span ng-class="{done:item.completed}" ltc-editable class-off="done" ng-model="item.email">
+            <strong>{{item.email}}</strong></span>
+          <span ng-class="{done:item.completed}" ltc-editable class-off="done" ng-model="item.startDateTime">
+            <strong>{{item.startDateTime}}</strong></span>
+        <button ng-click="deleteTask(0)" class="btn button icon-left ion-trash-b button-positive">Delete</button>
+      </li>
+      </ul>
+      <div class="no-items"><small ng-show="item.length==0">NO ITEMS!</small></div>
+    </div>
+
+    </ion-content>
+
+</ion-view>

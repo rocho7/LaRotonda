@@ -1,0 +1,22 @@
+<ion-pane >
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Form</h1>
+    </ion-header-bar>
+    <ion-content ><!--ng-controller="MainController"-->
+      <formly-form model="formData" fields="formFields" form="mainInputForm">
+        <button type="button" class="button button-block button-positive"
+        ng-disabled="mainInputForm.$invalid" ng-click="doSubmit()" name="button">Submit</button>
+      <formly-form>
+    
+    </formly-form></formly-form>
+  </ion-content>
+</ion-pane>
+
+  <!--this is the template for hte date picker we will use with formly-->
+  <script type="text/ng-template" id="inputDatePicker.html">
+  <ion-item class="item-icon-right">
+  <i ng-click="to.onclick(model,options)"
+  class="icon ion-ios-calendar-outline"></i>
+  {{model[options.key] | date : to.dateFormat }}
+  </ion-item>
+  </script>
