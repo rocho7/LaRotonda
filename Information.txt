@@ -14,5 +14,3 @@ Example delete buttons
 https://github.com/danii-nebot/angular-nested-lists
 add elements into array and remove it.
 http://quecosacuriosa.blogspot.dk/2014/06/curso-de-angularjs-parte2.html
-
-hola
